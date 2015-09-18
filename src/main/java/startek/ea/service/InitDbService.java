@@ -44,7 +44,7 @@ public class InitDbService {
     public void init() {
     	System.out.println("< Application Booted />");
     	
-    	UserCategory category = new  UserCategory("User", "A normal user of the application");
+    	/*UserCategory category = new  UserCategory("User", "A normal user of the application");
     	categoryRepository.save(category);
     	UserCategory category2 = new  UserCategory("Model", "A Model user of the application");
     	categoryRepository.save(category2);
@@ -81,7 +81,7 @@ public class InitDbService {
         roles.add(roleAdmin);
         roles.add(roleUser);
         user.setRoles(roles);
-        appUserRepository.save(user);
+        appUserRepository.save(user);*/
        
       
         

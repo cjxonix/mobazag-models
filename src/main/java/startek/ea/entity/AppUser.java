@@ -91,6 +91,7 @@ public class AppUser implements Serializable {
 
     private String country;
 
+    private String profileimage;
     
     public AppUser() {
     }
@@ -119,7 +120,15 @@ public class AppUser implements Serializable {
     }
 
     
-    public List<Media> getMedias() {
+    public String getProfileimage() {
+		return profileimage;
+	}
+
+	public void setProfileimage(String profileimage) {
+		this.profileimage = profileimage;
+	}
+
+	public List<Media> getMedias() {
         return medias;
     }
 

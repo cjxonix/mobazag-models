@@ -72,18 +72,18 @@
 							<div id="login-box-inner">
 								<!-- <img src="img/logo-login.png" alt="SuperheroAdmin" class="img-responsive" id="login-logo"/> -->
 								<div id="login-logo" class="hidden-lg hidden-md">
-									<img src="${ctx}/t2/img/logo-login.png" alt="" /> EA
-									Modeling cpanel
+									<img src="${ctx}/t2/img/logo-login.png" alt="" /> Create Account
 								</div>
 
-								<form:form role="form" action="">
+								<form role="form" action="">
 
 									<div class="input-group input-group-lg">
-										<span class="input-group-addon">Member category</span> 
-										<form:select cssClass="form-control" path="d">
+										<span class="input-group-addonx">Category</span> 
+								
+										<select class="form-control" name="usercategory">
 											<c:forEach items="${memberCategory}" var="mc"></c:forEach>
-											<form:option value="${mc.categoryid}">${mc.categoryname}</form:option>
-										</form:select>
+											<option value="${mc.categoryid}">${mc.categoryname}</option>
+										</select>
 
 									</div>
 
@@ -128,7 +128,7 @@
 										</div>
 
 									</div>
-								</form:form>
+								</form>
 							</div>
 						</div>
 					</div>

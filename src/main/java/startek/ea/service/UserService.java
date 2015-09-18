@@ -99,4 +99,44 @@ public class UserService {
 		}
 		return encodedPassword;
 	}
+	/**
+	 * Save and create new user
+	 * @param user
+	 */
+
+	public void saveAppUser(AppUser user) {
+		appUserRepository.save(user);
+		
+	}
+
+ 
+	public Role findOneByRoleName(String roleName) {
+		return roleRepository.findOneByRoleName(roleName);
+
+	}
+	
+	
+	public void updateUserProfile(Long userid, String profileImage) {
+		AppUser student = appUserRepository.findOne(userid);
+		student.setProfileimage(profileImage);
+
+	}
+	
+	
+	public AppUser findOneByUseridAndUsername(Long userid, String username) {
+		AppUser user = appUserRepository.findOneByUseridAndUsername(userid, username);
+		if (user == null) {
+			return null;
+		}
+		List<Role> roles = roleRepository.findAllByAppusers(user);
+		user.setRoles(roles);
+
+		return user;
+	}
+
+	public AppUser findOneByUsername(String name) {
+		AppUser user = appUserRepository.findOneAppUserByUsername(name);	
+		return user;
+	}
+	
 }

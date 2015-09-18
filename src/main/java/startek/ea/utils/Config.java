@@ -14,5 +14,9 @@ public class Config {
 	public static final String DOMAIN = "http://localhost:8080/";
 	public static final String T1_ = DOMAIN + "t1/";
 	public static final String T2_ = DOMAIN + "t2/";
-	public static final String ASSETS_ = DOMAIN + "assets/";;
+	public static final String ASSETS_ = DOMAIN + "assets/";
+	
+	public static enum EN_Roles{
+ 				ROLE_USER,ROLE_ADMIN
+	}
 }

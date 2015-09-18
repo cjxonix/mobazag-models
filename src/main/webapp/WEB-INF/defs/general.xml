@@ -2,40 +2,59 @@
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
-       
+
 <tiles-definitions>
-    <!--Front End Admin Related Pages-->
-    <definition name="common" template="/WEB-INF/layout/commons/classic.jsp">
-        <put-attribute name="css" value="/WEB-INF/layout/commons/css.jsp" />
-        <put-attribute name="footer" value="/WEB-INF/layout/commons/footer.jsp" />
-        <put-attribute name="js" value="/WEB-INF/layout/commons/js.jsp" />
-    </definition>
-    
-    
-    <!--Linked Pages Compose-->
-    <definition name="index" template="/WEB-INF/jsp/index.jsp">
-        <put-attribute name="title" value="Welcome To Electronical Record System" />
-        <put-attribute name="header" value="/t1/inc_/header.jsp" />
-        <put-attribute name="slider" value="/t1/inc_/slider.jsp" />
-        <put-attribute name="footer" value="/t1/inc_/footer.jsp" />
-        <put-attribute name="advice" value="/t1/inc_/bottom_advice.jsp" />
-    </definition>
-    
-    <definition name="login" template="/WEB-INF/account/login.jsp">
-        <put-attribute name="css" value="/t2/inc/t_header.jsp" />
-        <put-attribute name="js" value="/t2/inc/t_footer_s.jsp" />
-        <put-attribute name="footer-note" value="/t2/inc/t_main_display_footer.jsp"/> 
-    </definition>
-    
-    <definition name="register" template="/WEB-INF/account/register.jsp">
-        <put-attribute name="css" value="/t2/inc/t_header.jsp" />
-        <put-attribute name="js" value="/t2/inc/t_footer_s.jsp" />
-        <put-attribute name="footer-note" value="/t2/inc/t_main_display_footer.jsp"/> 
-    </definition>
-    
-    
-    
-   
-    
-    
+	<!--Front End Admin Related Pages -->
+	<definition name="common" template="/WEB-INF/layout/commons/classic.jsp">
+		<put-attribute name="css" value="/WEB-INF/layout/commons/css.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layout/commons/footer.jsp" />
+		<put-attribute name="js" value="/WEB-INF/layout/commons/js.jsp" />
+	</definition>
+
+	<!-- FRONT END MAIN PARENT TEMP -->
+	<!--Linked Pages Compose -->
+	<definition name="front-end-main" template="/WEB-INF/layout/front/classic.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/commons/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layout/commons/footer.jsp" />
+		<put-attribute name="advice" value="/WEB-INF/layout/commons/bottom_advice.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="slider" value="" />
+ 	</definition>
+
+
+	<!--Index Page -->
+	<definition name="index" extends="front-end-main">
+		<put-attribute name="title" value="Home " />
+		<put-attribute name="slider" value="/WEB-INF/layout/commons/slider.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+	</definition>
+
+
+
+	<definition name="login" extends="front-end-main">
+		<put-attribute name="title" value="Login " />
+		<put-attribute name="body" value="/WEB-INF/jsp/account/login.jsp" />
+	</definition>
+
+	<definition name="register" extends="front-end-main">
+		<put-attribute name="title" value="Register" />
+		<put-attribute name="body" value="/WEB-INF/jsp/account/login.jsp" />
+	</definition>
+
+
+
+	<!-- COMMON PAGES -->
+	<definition name="contactus" extends="front-end-main">
+		<put-attribute name="title" value="Contact us" />
+		<put-attribute name="body" value="/WEB-INF/jsp/commons/contactus.jsp" />
+	</definition>
+	
+	<definition name="aboutus" extends="front-end-main">
+		<put-attribute name="title" value="About us" />
+		<put-attribute name="body" value="/WEB-INF/jsp/commons/aboutus.jsp" />
+	</definition>
+
+
+
+
 </tiles-definitions>

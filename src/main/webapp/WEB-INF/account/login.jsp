@@ -37,7 +37,7 @@
 				class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 hidden-sm hidden-xs"
 				id="login-full-left">
 
-				<h2>EA Modeling cpanel Login</h2>
+				<h2>EA Modeling  Login</h2>
 				<p class="text-left">
 					Please try to login or <a href="#">create a new account</a> to
 					start publishing your self as model or promoting your Modeling
